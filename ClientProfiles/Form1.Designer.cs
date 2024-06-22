@@ -28,31 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            this.webBrowser2 = new System.Windows.Forms.WebBrowser();
             this.btnGetProfiles = new System.Windows.Forms.Button();
             this.txtProfiles = new System.Windows.Forms.TextBox();
             this.btnGetAligners = new System.Windows.Forms.Button();
             this.txtAligners = new System.Windows.Forms.TextBox();
+            this.btnBrowser = new System.Windows.Forms.Button();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.SuspendLayout();
-            // 
-            // webBrowser1
-            // 
-            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser1.Location = new System.Drawing.Point(0, 0);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(996, 638);
-            this.webBrowser1.TabIndex = 0;
-            // 
-            // webBrowser2
-            // 
-            this.webBrowser2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser2.Location = new System.Drawing.Point(0, 0);
-            this.webBrowser2.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser2.Name = "webBrowser2";
-            this.webBrowser2.Size = new System.Drawing.Size(996, 638);
-            this.webBrowser2.TabIndex = 1;
             // 
             // btnGetProfiles
             // 
@@ -90,17 +72,35 @@
             this.txtAligners.Size = new System.Drawing.Size(457, 68);
             this.txtAligners.TabIndex = 5;
             // 
+            // btnBrowser
+            // 
+            this.btnBrowser.Location = new System.Drawing.Point(45, 258);
+            this.btnBrowser.Name = "btnBrowser";
+            this.btnBrowser.Size = new System.Drawing.Size(75, 23);
+            this.btnBrowser.TabIndex = 7;
+            this.btnBrowser.Text = "Start browse";
+            this.btnBrowser.UseVisualStyleBackColor = true;
+            this.btnBrowser.Click += new System.EventHandler(this.btnBrowser_Click);
+            // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Location = new System.Drawing.Point(37, 307);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(938, 316);
+            this.webBrowser1.TabIndex = 8;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(996, 638);
+            this.Controls.Add(this.webBrowser1);
+            this.Controls.Add(this.btnBrowser);
             this.Controls.Add(this.txtAligners);
             this.Controls.Add(this.btnGetAligners);
             this.Controls.Add(this.txtProfiles);
             this.Controls.Add(this.btnGetProfiles);
-            this.Controls.Add(this.webBrowser2);
-            this.Controls.Add(this.webBrowser1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -109,13 +109,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.WebBrowser webBrowser1;
-        private System.Windows.Forms.WebBrowser webBrowser2;
         private System.Windows.Forms.Button btnGetProfiles;
         private System.Windows.Forms.TextBox txtProfiles;
         private System.Windows.Forms.Button btnGetAligners;
         private System.Windows.Forms.TextBox txtAligners;
+        private System.Windows.Forms.Button btnBrowser;
+        private System.Windows.Forms.WebBrowser webBrowser1;
     }
 }
 

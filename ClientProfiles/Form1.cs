@@ -1,14 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ClientProfiles
@@ -36,6 +27,12 @@ namespace ClientProfiles
             response.EnsureSuccessStatusCode();
             string requestBody = await response.Content.ReadAsStringAsync();
             txtAligners.Text = requestBody;
+        }
+
+        private void btnBrowser_Click(object sender, EventArgs e)
+        {
+            webBrowser1.ScriptErrorsSuppressed = true;
+            webBrowser1.Navigate("https://localhost:7147/");
         }
     }
 }
