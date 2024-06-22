@@ -7,10 +7,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
-builder.Services.AddDbContext<ProfileDbContext>(options => options.UseSqlite(
-    builder.Configuration.GetConnectionString("profilesDb")));
-builder.Services.AddDbContext<AlignerDbContext>(options => options.UseSqlite(
-    builder.Configuration.GetConnectionString("profilesDb")));
+
+#region add databases
+builder.Services.AddDbContext<ProfileDbContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("dhpDb")));
+builder.Services.AddDbContext<AlignerDbContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("dhpDb")));
+#endregion
 
 //add swagger
 builder.Services.AddEndpointsApiExplorer();
