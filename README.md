@@ -8,4 +8,6 @@
     * PM> Update-Database
 
     * PM> add-migration addAlignerTableToDb -context AlignerDbContext
-    * PM> Update-Database -context AlignerDbContext
+    * PM> 
+*API
+	* swagger: https://localhost:7147/swagger/index.html
