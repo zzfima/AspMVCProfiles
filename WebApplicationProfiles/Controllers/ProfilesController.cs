@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebApplicationProfiles.Data;
 using WebApplicationProfiles.Models;
@@ -12,9 +7,9 @@ namespace WebApplicationProfiles.Controllers
 {
     public class ProfilesController : Controller
     {
-        private readonly ProfilesDbContext _context;
+        private readonly ProfileDbContext _context;
 
-        public ProfilesController(ProfilesDbContext context)
+        public ProfilesController(ProfileDbContext context)
         {
             _context = context;
         }

@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
-builder.Services.AddDbContext<ProfilesDbContext>(options => options.UseSqlite(
+builder.Services.AddDbContext<ProfileDbContext>(options => options.UseSqlite(
     builder.Configuration.GetConnectionString("profilesDb")));
 builder.Services.AddDbContext<AlignerDbContext>(options => options.UseSqlite(
     builder.Configuration.GetConnectionString("profilesDb")));

@@ -9,7 +9,7 @@ using WebApplicationProfiles.Data;
 
 namespace WebApplicationProfiles.Migrations
 {
-    [DbContext(typeof(ProfilesDbContext))]
+    [DbContext(typeof(ProfileDbContext))]
     [Migration("20240622070146_addProfilesTableToDb")]
     partial class addProfilesTableToDb
     {

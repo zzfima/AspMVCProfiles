@@ -8,7 +8,7 @@ using WebApplicationProfiles.Data;
 
 namespace WebApplicationProfiles.Migrations
 {
-    [DbContext(typeof(ProfilesDbContext))]
+    [DbContext(typeof(ProfileDbContext))]
     partial class ProfilesDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
