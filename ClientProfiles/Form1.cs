@@ -34,7 +34,6 @@ namespace ClientProfiles
             response.EnsureSuccessStatusCode();
             string requestBody = await response.Content.ReadAsStringAsync();
             txtProfiles.Text = requestBody;
-            webView21.Source = new Uri("www.google.com");
         }
 
         private async void btnGetAligners_Click(object sender, EventArgs e)
