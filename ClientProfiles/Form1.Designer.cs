@@ -40,7 +40,7 @@
             // 
             // btnGetProfiles
             // 
-            this.btnGetProfiles.Location = new System.Drawing.Point(12, 96);
+            this.btnGetProfiles.Location = new System.Drawing.Point(12, 120);
             this.btnGetProfiles.Name = "btnGetProfiles";
             this.btnGetProfiles.Size = new System.Drawing.Size(75, 23);
             this.btnGetProfiles.TabIndex = 2;
@@ -50,7 +50,7 @@
             // 
             // txtProfiles
             // 
-            this.txtProfiles.Location = new System.Drawing.Point(12, 12);
+            this.txtProfiles.Location = new System.Drawing.Point(12, 46);
             this.txtProfiles.Multiline = true;
             this.txtProfiles.Name = "txtProfiles";
             this.txtProfiles.Size = new System.Drawing.Size(457, 68);
@@ -58,7 +58,7 @@
             // 
             // btnGetAligners
             // 
-            this.btnGetAligners.Location = new System.Drawing.Point(622, 96);
+            this.btnGetAligners.Location = new System.Drawing.Point(622, 120);
             this.btnGetAligners.Name = "btnGetAligners";
             this.btnGetAligners.Size = new System.Drawing.Size(75, 23);
             this.btnGetAligners.TabIndex = 4;
@@ -68,7 +68,7 @@
             // 
             // txtAligners
             // 
-            this.txtAligners.Location = new System.Drawing.Point(622, 12);
+            this.txtAligners.Location = new System.Drawing.Point(622, 46);
             this.txtAligners.Multiline = true;
             this.txtAligners.Name = "txtAligners";
             this.txtAligners.Size = new System.Drawing.Size(457, 68);
@@ -81,13 +81,13 @@
             this.webView21.DefaultBackgroundColor = System.Drawing.Color.White;
             this.webView21.Location = new System.Drawing.Point(12, 196);
             this.webView21.Name = "webView21";
-            this.webView21.Size = new System.Drawing.Size(1364, 617);
+            this.webView21.Size = new System.Drawing.Size(1364, 583);
             this.webView21.TabIndex = 9;
             this.webView21.ZoomFactor = 1D;
             // 
             // goButton
             // 
-            this.goButton.Location = new System.Drawing.Point(416, 167);
+            this.goButton.Location = new System.Drawing.Point(1301, 790);
             this.goButton.Name = "goButton";
             this.goButton.Size = new System.Drawing.Size(75, 23);
             this.goButton.TabIndex = 11;
@@ -97,7 +97,7 @@
             // 
             // txtAddressBar
             // 
-            this.txtAddressBar.Location = new System.Drawing.Point(12, 170);
+            this.txtAddressBar.Location = new System.Drawing.Point(12, 12);
             this.txtAddressBar.Name = "txtAddressBar";
             this.txtAddressBar.Size = new System.Drawing.Size(398, 20);
             this.txtAddressBar.TabIndex = 10;

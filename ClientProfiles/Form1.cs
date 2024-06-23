@@ -30,7 +30,7 @@ namespace ClientProfiles
         private async void btnGetProfiles_Click(object sender, EventArgs e)
         {
             var client = new HttpClient();
-            HttpResponseMessage response = await client.GetAsync("https://localhost:7147/dcp/profiles");
+            HttpResponseMessage response = await client.GetAsync($"{txtAddressBar.Text}dcp/profiles");
             response.EnsureSuccessStatusCode();
             string requestBody = await response.Content.ReadAsStringAsync();
             txtProfiles.Text = requestBody;
@@ -39,7 +39,7 @@ namespace ClientProfiles
         private async void btnGetAligners_Click(object sender, EventArgs e)
         {
             var client = new HttpClient();
-            HttpResponseMessage response = await client.GetAsync("https://localhost:7147/dcp/aligners");
+            HttpResponseMessage response = await client.GetAsync($"{txtAddressBar.Text}dcp/aligners");
             response.EnsureSuccessStatusCode();
             string requestBody = await response.Content.ReadAsStringAsync();
             txtAligners.Text = requestBody;
