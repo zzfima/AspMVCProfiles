@@ -32,13 +32,15 @@
             this.txtProfiles = new System.Windows.Forms.TextBox();
             this.btnGetAligners = new System.Windows.Forms.Button();
             this.txtAligners = new System.Windows.Forms.TextBox();
-            this.btnBrowser = new System.Windows.Forms.Button();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
+            this.goButton = new System.Windows.Forms.Button();
+            this.txtAddressBar = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.webView21)).BeginInit();
             this.SuspendLayout();
             // 
             // btnGetProfiles
             // 
-            this.btnGetProfiles.Location = new System.Drawing.Point(79, 64);
+            this.btnGetProfiles.Location = new System.Drawing.Point(12, 96);
             this.btnGetProfiles.Name = "btnGetProfiles";
             this.btnGetProfiles.Size = new System.Drawing.Size(75, 23);
             this.btnGetProfiles.TabIndex = 2;
@@ -48,7 +50,7 @@
             // 
             // txtProfiles
             // 
-            this.txtProfiles.Location = new System.Drawing.Point(175, 19);
+            this.txtProfiles.Location = new System.Drawing.Point(12, 12);
             this.txtProfiles.Multiline = true;
             this.txtProfiles.Name = "txtProfiles";
             this.txtProfiles.Size = new System.Drawing.Size(457, 68);
@@ -56,7 +58,7 @@
             // 
             // btnGetAligners
             // 
-            this.btnGetAligners.Location = new System.Drawing.Point(79, 183);
+            this.btnGetAligners.Location = new System.Drawing.Point(622, 96);
             this.btnGetAligners.Name = "btnGetAligners";
             this.btnGetAligners.Size = new System.Drawing.Size(75, 23);
             this.btnGetAligners.TabIndex = 4;
@@ -66,43 +68,56 @@
             // 
             // txtAligners
             // 
-            this.txtAligners.Location = new System.Drawing.Point(175, 138);
+            this.txtAligners.Location = new System.Drawing.Point(622, 12);
             this.txtAligners.Multiline = true;
             this.txtAligners.Name = "txtAligners";
             this.txtAligners.Size = new System.Drawing.Size(457, 68);
             this.txtAligners.TabIndex = 5;
             // 
-            // btnBrowser
+            // webView21
             // 
-            this.btnBrowser.Location = new System.Drawing.Point(45, 258);
-            this.btnBrowser.Name = "btnBrowser";
-            this.btnBrowser.Size = new System.Drawing.Size(75, 23);
-            this.btnBrowser.TabIndex = 7;
-            this.btnBrowser.Text = "Start browse";
-            this.btnBrowser.UseVisualStyleBackColor = true;
-            this.btnBrowser.Click += new System.EventHandler(this.btnBrowser_Click);
+            this.webView21.AllowExternalDrop = true;
+            this.webView21.CreationProperties = null;
+            this.webView21.DefaultBackgroundColor = System.Drawing.Color.White;
+            this.webView21.Location = new System.Drawing.Point(12, 196);
+            this.webView21.Name = "webView21";
+            this.webView21.Size = new System.Drawing.Size(1364, 617);
+            this.webView21.TabIndex = 9;
+            this.webView21.ZoomFactor = 1D;
             // 
-            // webBrowser1
+            // goButton
             // 
-            this.webBrowser1.Location = new System.Drawing.Point(37, 307);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(938, 316);
-            this.webBrowser1.TabIndex = 8;
+            this.goButton.Location = new System.Drawing.Point(416, 167);
+            this.goButton.Name = "goButton";
+            this.goButton.Size = new System.Drawing.Size(75, 23);
+            this.goButton.TabIndex = 11;
+            this.goButton.Text = "Go";
+            this.goButton.UseVisualStyleBackColor = true;
+            this.goButton.Click += new System.EventHandler(this.goButton_Click);
+            // 
+            // txtAddressBar
+            // 
+            this.txtAddressBar.Location = new System.Drawing.Point(12, 170);
+            this.txtAddressBar.Name = "txtAddressBar";
+            this.txtAddressBar.Size = new System.Drawing.Size(398, 20);
+            this.txtAddressBar.TabIndex = 10;
+            this.txtAddressBar.Text = "https://localhost:7147/";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(996, 638);
-            this.Controls.Add(this.webBrowser1);
-            this.Controls.Add(this.btnBrowser);
+            this.ClientSize = new System.Drawing.Size(1388, 825);
+            this.Controls.Add(this.goButton);
+            this.Controls.Add(this.txtAddressBar);
+            this.Controls.Add(this.webView21);
             this.Controls.Add(this.txtAligners);
             this.Controls.Add(this.btnGetAligners);
             this.Controls.Add(this.txtProfiles);
             this.Controls.Add(this.btnGetProfiles);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.webView21)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -113,8 +128,9 @@
         private System.Windows.Forms.TextBox txtProfiles;
         private System.Windows.Forms.Button btnGetAligners;
         private System.Windows.Forms.TextBox txtAligners;
-        private System.Windows.Forms.Button btnBrowser;
-        private System.Windows.Forms.WebBrowser webBrowser1;
+        private Microsoft.Web.WebView2.WinForms.WebView2 webView21;
+        private System.Windows.Forms.Button goButton;
+        private System.Windows.Forms.TextBox txtAddressBar;
     }
 }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Web.WebView2.Core;
+using System;
 using System.Net.Http;
 using System.Windows.Forms;
 
@@ -9,6 +10,21 @@ namespace ClientProfiles
         public Form1()
         {
             InitializeComponent();
+
+            InitializeAsync();
+        }
+
+        async void InitializeAsync()
+        {
+            await webView21.EnsureCoreWebView2Async(null);
+        }
+
+        private void goButton_Click(object sender, EventArgs e)
+        {
+            if (webView21 != null && webView21.CoreWebView2 != null)
+            {
+                webView21.CoreWebView2.Navigate(txtAddressBar.Text);
+            }
         }
 
         private async void btnGetProfiles_Click(object sender, EventArgs e)
@@ -18,6 +34,7 @@ namespace ClientProfiles
             response.EnsureSuccessStatusCode();
             string requestBody = await response.Content.ReadAsStringAsync();
             txtProfiles.Text = requestBody;
+            webView21.Source = new Uri("www.google.com");
         }
 
         private async void btnGetAligners_Click(object sender, EventArgs e)
@@ -27,12 +44,6 @@ namespace ClientProfiles
             response.EnsureSuccessStatusCode();
             string requestBody = await response.Content.ReadAsStringAsync();
             txtAligners.Text = requestBody;
-        }
-
-        private void btnBrowser_Click(object sender, EventArgs e)
-        {
-            webBrowser1.ScriptErrorsSuppressed = true;
-            webBrowser1.Navigate("https://localhost:7147/");
         }
     }
 }
